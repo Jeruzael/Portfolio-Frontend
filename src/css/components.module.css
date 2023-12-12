@@ -191,5 +191,36 @@
 /*   Navigational Components   */
 /*   Informational Components   */
 /*   Containers   */
+/*   Validations   */
+.error, .success {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 15vh;
+  border: 1px solid red;
+  background-color: #f9f9f9;
+}
+
+.success {
+  color: #5196e1;
+  border: 1px solid #5196e1;
+}
+
+.error {
+  color: #d55d62;
+  border: 1px solid #d55d62;
+}
+
+/*   Animations   */
+.ball {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid red;
+  background-color: #88aa96;
+  position: absolute;
+}
 
 /*# sourceMappingURL=components.module.css.map */

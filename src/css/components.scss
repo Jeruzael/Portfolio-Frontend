@@ -191,3 +191,31 @@
 
 /*   Containers   */
 
+/*   Validations   */
+%verification {
+    @include res-center;
+    @include rez-size($w: 20vw, $h: 15vh);
+    background-color: #f9f9f9;
+    
+}
+
+.success {
+    color: #5196e1;
+    @extend %verification;
+    border: 1px solid #5196e1;
+}
+
+.error {
+    color: #d55d62;
+    @extend %verification;
+    border: 1px solid #d55d62;
+}
+
+
+/*   Animations   */
+.ball {
+    display: block;
+    @include rez-size($w: 10px,$h: 10px);
+    background-color: #88aa96;
+    position: absolute;
+}

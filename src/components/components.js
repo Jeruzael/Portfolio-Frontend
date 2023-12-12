@@ -119,3 +119,24 @@ export const DeckCard = ({children}) => {
         </>
     )
 }
+
+export const Success = ({children}) => {
+    return(
+        <>
+            <div className={style.success}>
+                {children}
+            </div>
+        </>
+    )
+}
+
+export const Error = ({children}) => {
+    return(
+        <>
+            <div className={style.error}>
+                {children}
+            </div>
+        </>
+    )
+}
+
