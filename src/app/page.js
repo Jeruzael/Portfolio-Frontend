@@ -114,38 +114,7 @@ export default function Home() {
 
   const Checker = () => {
     if(test === true){
-      setCard({
-        ...cards,
-        card2: {
-          ...cards.card2,
-          rotation: 0,
-          top: 8,
-          left: 20
-        },
-        card3: {
-          ...cards.card3,
-          rotation: 0,
-          top: 8,
-          left: 20
-        },
-        card4: {
-          rotation: 0,
-          top: 8,
-          left: 20,
-          skew: 0,
-          scaleX: 1,
-          scaleY: 1
-        },
-        card5: {
-          rotation: 0,
-          top: 8,
-          left: 20,
-          skew: 0,
-          scaleX: 1,
-          scaleY: 1
-        }
-      })
-      setTest(false)
+      console.log('Test is true')
     }else{
       setCard({
         ...cards,
@@ -168,11 +137,11 @@ export default function Home() {
         }, 
         card4: {
           rotation: -60,
-          top: 25,
+          top: 23,
           left: 2,
           skew: 40,
-          scaleX: 0.6,
-          scaleY: 0.8
+          scaleX: 0.5,
+          scaleY: 0.7
         },
         card5: {
           rotation: 58,
@@ -186,13 +155,11 @@ export default function Home() {
     }
   }
 
-  const [testEff, setTestEff] = useState(true);
-  const [testEff2, setTestEff2] = useState(0);
+  const [testEff, setTestEff] = useState(true);  
 
   useEffect(()=>{
     if(testEff){
-      Checker()
-      console.log(`Test Eff 2: ${testEff2}`);
+      Checker()      
     }
     
   },[testEff]);
@@ -204,9 +171,9 @@ export default function Home() {
           <p>Hi! I'm</p>
           <h1>JERUZAEL DUMALE</h1>
           <p>DESIGNER/DEVELOPER</p>
-          <p>I’m a full-stack developer from the Philippines. I design and
-engineer web applications based on the highest standards.
-I implement new technologies that help your product
+          <p>I’m a frontend developer from the Philippines. I design and
+build web applications based on the highest standards
+Implementing new technologies that help your product
 stand out to competitors.</p>
         </BioCont>
       </Bio>

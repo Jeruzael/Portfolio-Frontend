@@ -17,7 +17,7 @@
 @mixin rez-size($w: 100vw, $h: 100vh){
     width: $w;
     height: $h;
-    border: 1px solid red;  
+    //border: 1px solid red;  
 }
 
 @mixin res-start-start($or: row){
@@ -106,6 +106,13 @@
     @include rez-size($h: 10vh );
     @include res-center;
     @include max-min(200px, 2500px, 50px, 0px);    
+    font-size: 1.4rem;
+    background-color: rgba(235, 235, 235, 0.27);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 1;
     .header__container {
         @include rez-size($w: 97vw, $h: 9vh );
         @include res-between;  
@@ -120,7 +127,7 @@
             @include rez-size($w: 20vw, $h:5vh);
             @include res-evenly;
         }
-    }
+    }   
 }
 
 
@@ -150,6 +157,9 @@
     @include rez-size($w: 39vw, $h: 40vh);
     @include res-start-start($or: column);
     @include max-min(3000px, 2500px, 650px, 390px);
+    p {
+        font-size: 1.7rem;
+    }
 }
 
 .deck {
@@ -160,10 +170,10 @@
 
 @keyframes deckAnimation {
     from {
-        background-color: rgb(143, 79, 216);
+        //background-color: rgb(143, 79, 216);
     }
     to {
-        background-color: #7C86B6;
+        //background-color: #7C86B6;
     }
 }
 
@@ -172,12 +182,26 @@
     @include rez-size($w: 16vw, $h: 50vh);
     @include res-center;
     border-radius: 8px;
-    background-color: #7C86B6;
+    //background-color: #7C86B6;
     position: absolute;
-    transition: 0.5s;
-    transition-delay: 0.5s;
+    transition: 0.7s;
+    transition-delay: 0.3s;
     transition-timing-function: ease-out;
     animation: deckAnimation 2s ease-out 0.2s 1 normal;
+
+    background-color: rgba(235, 235, 235, 0.27);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.deckCard:hover {
+    background-color: rgba(100, 80, 120, 0.23);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    z-index: 10;    
+    transition: 0.5s;
+    
 }
 
 /*   Footer    */
@@ -185,6 +209,9 @@
     @include rez-size($h: 20vh);
     @include max-min(200px, 2500px, 0px, 0px);
     @include res-center;
+    background-color: #343045;
+
+    
 }
 
 /*   Input controls   */
