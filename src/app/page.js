@@ -21,6 +21,7 @@ const Show = (b) => {
   }
 }
 
+
 const hi = "Hi! I\'m"
 const intro = "I\’m a frontend developer from the Philippines. I design and build web applications based on the highest standards Implementing new technologies that help your product stand out to competitors."
 
