@@ -158,12 +158,26 @@
     @include max-min(3000px, 2500px, 800px, 390px);
 }
 
+@keyframes deckAnimation {
+    from {
+        background-color: rgb(143, 79, 216);
+    }
+    to {
+        background-color: #7C86B6;
+    }
+}
+
 .deckCard {
     @include max-min(3000px, 2500px, 200px, 230px);
     @include rez-size($w: 16vw, $h: 50vh);
     @include res-center;
     border-radius: 8px;
-    
+    background-color: #7C86B6;
+    position: absolute;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-out;
+    animation: deckAnimation 2s ease-out 0.2s 1 normal;
 }
 
 /*   Footer    */

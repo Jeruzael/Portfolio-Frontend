@@ -109,11 +109,16 @@ export const Deck = ({children}) => {
         </>
     )
 }
-
-export const DeckCard = ({children}) => {
+ 
+export const DeckCard = ({children, rotate, left, top, skew, scaleX, scaleY}) => {
     return(
         <>
-            <div className={style.deckCard}>
+            <div className={style.deckCard} style={{
+                transform: `rotate(${rotate}) skewY(${skew}) scaleX(${scaleX}) scaleY(${scaleY})`,                                
+                left: `${left}`,
+                top: `${top}`,
+
+            }}>
                 {children}
             </div>
         </>
