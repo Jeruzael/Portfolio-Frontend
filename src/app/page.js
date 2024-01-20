@@ -21,6 +21,8 @@ const Show = (b) => {
   }
 }
 
+const hi = "Hi! I'm"
+const intro = "I’m a frontend developer from the Philippines. I design and build web applications based on the highest standards Implementing new technologies that help your product stand out to competitors."
 
 export default function Home() {
   const [test, setTest] = useState(false)  
@@ -162,19 +164,16 @@ export default function Home() {
       Checker()      
     }
     
-  },[testEff]);
+  },[testEff, Checker()]);
 
   return (
     <>
       <Bio>
         <BioCont>
-          <p>Hi! I'm</p>
+          <p>{hi}</p>
           <h1>JERUZAEL DUMALE</h1>
           <p>DESIGNER/DEVELOPER</p>
-          <p>I’m a frontend developer from the Philippines. I design and
-build web applications based on the highest standards
-Implementing new technologies that help your product
-stand out to competitors.</p>
+          <p>{intro}</p>
         </BioCont>
       </Bio>
       <Deck>
