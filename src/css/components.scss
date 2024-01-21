@@ -156,7 +156,7 @@
 .bio_textCont {
     @include rez-size($w: 39vw, $h: 40vh);
     @include res-start-start($or: column);
-    @include max-min(3000px, 2500px, 650px, 390px);
+    @include max-min(3000px, 2500px, 300x, 200px);
     p {
         font-size: 1.7rem;
     }

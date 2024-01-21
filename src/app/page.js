@@ -1,6 +1,7 @@
 'use client'
-import Image from 'next/image'
-import styles from './page.module.css'
+import store from './store'
+import { Provider } from 'react-redux'
+
 import { useState } from 'react'
 import { 
   Bio,
@@ -13,6 +14,8 @@ import {
 } from '@/components/components'
 import { useEffect, useRef } from 'react'
 
+
+
 const Show = (b) => {
   if(b){
     return <Success>Success</Success>
@@ -20,7 +23,6 @@ const Show = (b) => {
     return <Error>Invalid</Error>
   }
 }
-
 
 const hi = "Hi! I\'m"
 const intro = "I\’m a frontend developer from the Philippines. I design and build web applications based on the highest standards Implementing new technologies that help your product stand out to competitors."
